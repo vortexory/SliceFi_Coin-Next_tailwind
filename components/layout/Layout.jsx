@@ -1,23 +1,15 @@
 import {useRouter } from "next/router";
-import { Sora } from "next/font/google";
 import Head from "next/head";
 import Header from "./Header";
 import Nav from "./Nav";
 import Footer from "./Footer";
-
-// setup font
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-sora",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-});
 
 const Layout = ({ children }) => {
   const location = useRouter();
   const path = location.pathname;
   return (
     <main
-      className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
+      className={`page bg-[#09090B] w-full text-white bg-cover bg-no-repeat relative h-full`}
     >
       {/* metadata */}
       <Head>
@@ -44,6 +36,7 @@ const Layout = ({ children }) => {
 
       {/* main content */}
       {children}
+
       <Footer />
     </main>
   );

@@ -39,6 +39,9 @@ module.exports = {
         poppins: [`var(--font-poppins)`, "sans-serif"],
         sora: [`var(--font-sora)`, "sans-serif"],
       },
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(135deg, #09090B 0%, #09090B 50%, rgba(109,81,251,0.10) 100%)',
+      },
     },
   },
   container: {
@@ -46,5 +49,5 @@ module.exports = {
       DEFAULT: "15px",
     },
   },
-  plugins: [require("tailwind-scrollbar")],
+  plugins: [require("tailwind-scrollbar"), require("tailwindcss-filters")],
 };
