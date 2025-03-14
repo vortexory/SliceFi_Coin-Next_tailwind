@@ -75,8 +75,8 @@ const Home = () => {
               asset transfers from crypto to real-world value.
             </p>
           </div>
-          <div className="flex justify-between">
-            <div>
+          <div className="flex justify-between flex-wrap">
+            <div className="relative">
               <h3 className="text-[24px] font-semibold leading-[32px] tracking-[-0.6px] text-[#E6E6F4] mb-6">
                 The Utility of SlICEFI
               </h3>

@@ -38,7 +38,7 @@ const Header = () => {
       <Nav />
       <div className="relative">
         <div className="relative flex justify-center z-[100]">
-          <div className="max-w-[1216px] ">
+          <div className="w-[1216px] lg:w-full ">
             <div className="flex flex-col items-center text-center mt-16 px-6">
               <button className="relative flex flex-col items-center justify-center px-[17px] py-[5px] flex-shrink-0">
                 <div className="bg-[linear-gradient(135deg,_#09090B_0%,_rgba(9,9,11,0.8)_50%,_rgba(139,92,246,0.7)_100%)] absolute w-full h-full border-[1px] border-[#60A5FA] rounded-full p-[2px]"></div>
