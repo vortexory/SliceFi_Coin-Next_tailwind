@@ -5,8 +5,8 @@ import { TgIcon, FaceBookIcon, MediumIcon, DiscordIcon } from "../assets/icons";
 
 const Footer = () => {
   return (
-    <footer className="pt-[60px]">
-      <div className="z-30 w-full lg:px-[208px] md:px-[100px] px-[20px] py-[49px] ">
+    <footer className="xl:pt-[60px] md:pt-[30px] pt-0">
+      <div className="z-30 w-full lg:px-[208px] md:px-[100px] px-[20px] md:py-[49px] py-[20px]">
         <div className="flex justify-between flex-wrap pb-[48px] gap-[32px]">
           <div className="lg:w-[306px] w-full pr-[48px]">
             <Image src={Logo} alt="logo" width={60} height={60}></Image>
@@ -89,7 +89,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="h-[3px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7]" />
+        <hr className="h-[2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7]" />
         <div className="flex h-[53px] pt-[36px] justify-center items-center">
           <p className="text-center text-[15px] font-normal leading-[20px] text-[#8A8ACC]">
             © 2025 SLICEFI. All rights reserved.
