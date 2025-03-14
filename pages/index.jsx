@@ -284,7 +284,11 @@ const Home = () => {
             </div>
           </div>
           <div className="absolute left-0 xl:top-0 md:top-[-75px] top-[-150px] z-[0]">
-            <Image src={LeftWorld} className="xl:w-auto md:w-[300px] w-[200px]" alt="leftworld"></Image>
+            <Image
+              src={LeftWorld}
+              className="xl:w-auto md:w-[300px] w-[200px]"
+              alt="leftworld"
+            ></Image>
           </div>
         </div>
         <div
@@ -333,7 +337,7 @@ const Home = () => {
           </div>
         </div>
         <div className="investment mb-[60px] relative" id="investment">
-          <div className="text-center mb-[60px]">
+          <div className="text-center mb-[60px] relative z-[20]">
             <h2 className="text-center text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
               Investment Opportunities
             </h2>
@@ -342,7 +346,7 @@ const Home = () => {
               decentralized and transparent opportunities.
             </p>
           </div>
-          <div className="flex justify-center items-center flex-col lg:pb-[60px] pb-[40px]">
+          <div className="flex justify-center items-center flex-col lg:pb-[60px] pb-[40px] relative z-[20]">
             <div className="flex justify-center">
               <div className="flex flex-wrap justify-around items-center gap-[32px]">
                 {InvestmentData.map((item, index) => (
@@ -429,14 +433,14 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center xl:pb-[42px] md:pb-[20px] pb-0">
+          <div className="flex justify-center xl:pb-[42px] md:pb-[20px] pb-0 relative z-[20]">
             <MainButton classes="w-[520px] h-[60px]">
               <p className="relative text-[20px] font-bold leading-[20px] text-[#E6E6F4]">
                 Explore All Investment Opportunities
               </p>
             </MainButton>
           </div>
-          <div className="absolute left-0 top-[-500px]">
+          <div className="absolute left-0 lg:w-auto w-[300px] top-[-400px] z-0">
             <Image src={LeftJewellery} alt="LeftJewellery"></Image>
           </div>
         </div>
