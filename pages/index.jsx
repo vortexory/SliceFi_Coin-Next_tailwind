@@ -34,14 +34,14 @@ import {
 import Box from "../components/common/Box";
 import MainButton from "../components/common/MainButton";
 import BeautyButton from "../components/common/BeautyButton";
-import { BottomImg } from "../components/assets/images";
+import { BottomImg, LeftJewellery, LeftWorld, RightJewellery } from "../components/assets/images";
 
 const Home = () => {
   return (
     <div className="h-full">
       {/* text */}
       <div className="w-full h-full">
-        <div className="chooseSection py-[90px] px-[208px] mb-[60px]">
+        <div className="chooseSection relative py-[90px] px-[208px] mb-[60px]">
           <div className="text-center mb-[60px]">
             <h2 className="text-center font-['Segoe_UI'] text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
               Why Choose SLICEFI?
@@ -52,11 +52,14 @@ const Home = () => {
             </p>
           </div>
           <div className="flex justify-center">
-            <div className="flex flex-wrap justify-around items-center gap-[32px]">
+            <div className="flex flex-wrap justify-around items-center gap-[22px]">
               {chooseSectionData.map((item, index) => (
                 <Box key={index} data={item} />
               ))}
             </div>
+          </div>
+          <div className="absolute right-0 top-0">
+            <Image src={RightJewellery} alt="RightJewellery"></Image>
           </div>
         </div>
         <div
@@ -172,7 +175,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="roadmap mb-[60px] pt-[84px] pb-[60px]" id="roadmap">
+        <div className="roadmap mb-[60px] pt-[84px] pb-[60px] relative" id="roadmap">
           <div className="text-center mb-[60px]">
             <h2 className="text-center font-['Segoe_UI'] text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
               RoadMap
@@ -268,8 +271,11 @@ const Home = () => {
               ))}
             </div>
           </div>
+          <div className="absolute inset-0">
+            <Image src={LeftWorld} alt="leftworld"></Image>
+          </div>
         </div>
-        <div className="tokenomics mb-[60px] py-[189px]" id="tokenomics">
+        <div className="tokenomics relative mb-[60px] py-[189px] bg-gradient-to-b from-[#09090B] to-[rgba(109,81,251,0.10)]" id="tokenomics">
           <div className="text-center mb-[60px]">
             <h2 className="text-center font-['Segoe_UI'] text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
               Tokenomics
@@ -311,7 +317,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="investment mb-[60px]" id="investment">
+        <div className="investment mb-[60px] relative" id="investment">
           <div className="text-center mb-[60px]">
             <h2 className="text-center font-['Segoe_UI'] text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
               Investment Opportunities
@@ -414,6 +420,9 @@ const Home = () => {
                 Explore All Investment Opportunities
               </p>
             </MainButton>
+          </div>
+          <div className="absolute left-0 top-[-500px]">
+            <Image src={LeftJewellery} alt="LeftJewellery"></Image>
           </div>
         </div>
         <div className="askquestion mb-[60px]" id="askquestion">

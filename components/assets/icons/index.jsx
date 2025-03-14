@@ -21,9 +21,10 @@ import EmptyMedalIcon from "./medal.png";
 import EmptyOnetwoIcon from "./onetwo.png";
 import ArrowDownIcon from "./arrowDownIcon.png";
 import ArrowTopIcon from "./arrowTopIcon.png";
-// import Icon from "./utilIcon.png";
-// import WireIcon from "./utilWireIcon.png";
-// import WireIcon from "./utilWireIcon.png";
+import TgIcon from "./tgIcon.png";
+import FaceBookIcon from "./facebookIcon.png";
+import MediumIcon from "./mediumIcon.png";
+import DiscordIcon from "./discordIcon.png";
 
 export {
   EmptyCircleIcon,
@@ -49,4 +50,8 @@ export {
   CheckIcons,
   ArrowDownIcon,
   ArrowTopIcon,
+  TgIcon,
+  FaceBookIcon,
+  MediumIcon,
+  DiscordIcon,
 };
