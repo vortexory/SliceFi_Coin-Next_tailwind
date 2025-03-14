@@ -34,16 +34,21 @@ import {
 import Box from "../components/common/Box";
 import MainButton from "../components/common/MainButton";
 import BeautyButton from "../components/common/BeautyButton";
-import { BottomImg, LeftJewellery, LeftWorld, RightJewellery } from "../components/assets/images";
+import {
+  BottomImg,
+  LeftJewellery,
+  LeftWorld,
+  RightJewellery,
+} from "../components/assets/images";
 
 const Home = () => {
   return (
     <div className="h-full">
       {/* text */}
       <div className="w-full h-full">
-        <div className="chooseSection relative py-[90px] px-[208px] mb-[60px]">
+        <div className="chooseSection relative xl:py-[90px] lg:py-[40px] py-[10px]  xl:px-[208px] lg:px-[100px] md:px-[50px] px-[20px] mb-[60px]">
           <div className="text-center mb-[60px]">
-            <h2 className="text-center font-['Segoe_UI'] text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
+            <h2 className="text-center text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
               Why Choose SLICEFI?
             </h2>
             <p className="text-[20px] mt-[20px] text-[#E6E6F4] font-normal leading-6">
@@ -52,9 +57,13 @@ const Home = () => {
             </p>
           </div>
           <div className="flex justify-center">
-            <div className="flex flex-wrap justify-around items-center gap-[22px]">
+            <div className="flex flex-wrap justify-around items-center gap-[32px]">
               {chooseSectionData.map((item, index) => (
-                <Box key={index} data={item} />
+                <Box
+                  className="lg:w-[480px] w-[400px] h-[174px]"
+                  key={index}
+                  data={item}
+                />
               ))}
             </div>
           </div>
@@ -63,11 +72,11 @@ const Home = () => {
           </div>
         </div>
         <div
-          className="slicefiSection mb-[60px] py-[35px] px-[352px]"
+          className="slicefiSection mb-[60px] lg:py-[35px] py-[10px] xl:px-[352px] lg:px-[100px] md:px-[50px] px-[20px]"
           id="slicefi"
         >
-          <div className="text-center mb-[60px]">
-            <h2 className="text-center font-['Segoe_UI'] text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
+          <div className="text-center lg:mb-[60px] mb-[25px]">
+            <h2 className="text-center text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
               SLICEFI
             </h2>
             <p className="text-[20px] font-normal text-[#E6E6F4] mt-[20px] leading-6">
@@ -75,14 +84,14 @@ const Home = () => {
               asset transfers from crypto to real-world value.
             </p>
           </div>
-          <div className="flex justify-between flex-wrap">
-            <div className="relative">
-              <h3 className="text-[24px] font-semibold leading-[32px] tracking-[-0.6px] text-[#E6E6F4] mb-6">
+          <div className="flex justify-between items-center flex-wrap">
+            <div className="relative lg:w-[500px] w-full">
+              <h3 className="text-[24px] font-semibold leading-[32px] lg:text-start text-center tracking-[-0.6px] text-[#E6E6F4] mb-6">
                 The Utility of SlICEFI
               </h3>
               <div className="flex flex-col">
                 {slicefiSectionData.map((item, index) => (
-                  <div key={index} className="flex mb-8">
+                  <div key={index} className="flex lg:mb-8 mb-[20px]">
                     <div className="mr-4">
                       <Image
                         src={item.icon}
@@ -161,23 +170,26 @@ const Home = () => {
                     <p>Dedicated account manager</p>
                   </div>
                 </div>
-                <MainButton classes="w-[520px] h-[60px] mt-8">
+                <MainButton classes="lg:w-[520px] w-full h-[60px] mt-8">
                   <p className="relative text-[20px] font-bold leading-[20px] text-[#E6E6F4]">
                     Join Platinum Membership
                   </p>
                 </MainButton>
               </div>
               <Image
-                className="absolute top-0 left-0 w-full h-full"
+                className="absolute top-0 left-0 w-full h-full min-w-[400px]"
                 src={BoardIcon}
                 alt="bg_board"
               ></Image>
             </div>
           </div>
         </div>
-        <div className="roadmap mb-[60px] pt-[84px] pb-[60px] relative" id="roadmap">
-          <div className="text-center mb-[60px]">
-            <h2 className="text-center font-['Segoe_UI'] text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
+        <div
+          className="roadmap mb-[60px] lg:pt-[84px] pt-[10px]  pb-[60px] relative"
+          id="roadmap"
+        >
+          <div className="text-center lg:mb-[60px] mb-[40px]">
+            <h2 className="text-center text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
               RoadMap
             </h2>
             <p className="text-[20px] mt-[20px] text-[#E6E6F4] font-normal leading-6">
@@ -275,7 +287,10 @@ const Home = () => {
             <Image src={LeftWorld} alt="leftworld"></Image>
           </div>
         </div>
-        <div className="tokenomics relative mb-[60px] py-[189px] bg-gradient-to-b from-[#09090B] to-[rgba(109,81,251,0.10)]" id="tokenomics">
+        <div
+          className="tokenomics relative mb-[60px] py-[189px] bg-gradient-to-b from-[#09090B] to-[rgba(109,81,251,0.10)]"
+          id="tokenomics"
+        >
           <div className="text-center mb-[60px]">
             <h2 className="text-center font-['Segoe_UI'] text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
               Tokenomics
@@ -436,7 +451,7 @@ const Home = () => {
           </div>
           <div className="flex justify-center">
             <div className="flex flex-col justify-around items-center">
-              <div className="relative px-[20px] pt-[65px] w-[760px] h-[760px]">
+              <div className="relative px-[20px] pt-[65px] lg:w-[760px] w-full h-[760px]">
                 <Image
                   className="absolute top-0 left-0 w-full h-full"
                   src={BoardIcon}
