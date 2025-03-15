@@ -26,6 +26,9 @@ import FaceBookIcon from "./facebookIcon.png";
 import MediumIcon from "./mediumIcon.png";
 import DiscordIcon from "./discordIcon.png";
 import GiftIcon from "./giftIcon.png";
+import GiftIcon2 from "./giftIcon2.png";
+import UserIcon from "./userIcon.png";
+import CommentIcon from "./commentIcon.png";
 import OneWhiteIcon from "./oneWhiteIcon.png";
 import TransactionIcon from "./transactionIcon.png";
 import OnesIcon from "./onesIcon.png";
@@ -34,11 +37,20 @@ import Lock from "./lock.png";
 import Rocket from "./rocket.png";
 import World from "./world.png";
 import UtilWorldIcon from "./utilWorldIcon.png";
+import TelegramBox from "./telegramBox.png";
+import DiscordBox from "./discordBox.png";
+import InstagramBox from "./instagramBox.png";
+import XBox from "./xBox.png";
+import CrownIcon from "./crownIcon.png";
+import RightArrow from "./rightArrow.png";
 export {
   EmptyCircleIcon,
   EmptyShieldIcon,
   EmptyMedalIcon,
   EmptyOnetwoIcon,
+  CommentIcon,
+  GiftIcon2,
+  UserIcon,
   PasteIcon,
   OneIcon,
   GraphIcon,
@@ -71,4 +83,10 @@ export {
   Rocket,
   World,
   UtilWorldIcon,
+  TelegramBox,
+  XBox,
+  DiscordBox,
+  InstagramBox,
+  CrownIcon,
+  RightArrow,
 };
