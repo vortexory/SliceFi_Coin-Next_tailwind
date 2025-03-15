@@ -34,14 +34,14 @@ export const navData = [
 const Header = () => {
   const pathname = usePathname();
   return (
-    <div className="min-h-screen relative text-white bg-gradient-to-tr from-[rgba(109,81,251,0.20)] via-[rgba(9,9,11,0.20)] to-[#09090B]">
+    <div className="min-h-screen relative text-white bg-gradient-to-tr from-[rgba(109,81,251,0.30)] via-[rgba(9,9,11,0.20)] to-[#09090B]">
       <Nav />
       <div className="relative">
         <div className="relative flex justify-center z-[100]">
-          <div className="lg:w-[1216px] w-full ">
+          <div className="xl:w-[1216px] w-full ">
             <div className="flex flex-col items-center text-center mt-16 px-6">
               <button className="relative flex flex-col items-center justify-center px-[17px] py-[5px] flex-shrink-0">
-                <div className="bg-[linear-gradient(135deg,_#09090B_0%,_rgba(9,9,11,0.8)_50%,_rgba(139,92,246,0.7)_100%)] absolute w-full h-full border-[1px] border-[#60A5FA] rounded-full p-[2px]"></div>
+                <div className="bg-gradient-to-br from-[#09090B] via-[#09090B] to-[rgba(109,81,251,0.50)] absolute w-full h-full border-[1px] border-[#60A5FA] rounded-full p-[2px]"></div>
                 <p className="z-10 text-center font-['Segoe_UI'] text-[20px] font-normal leading-[24px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
                   Pre-sale Starting Soon
                 </p>
@@ -55,7 +55,7 @@ const Header = () => {
                 powerful ecosystem.
               </p>
               <div className="my-[60px] flex space-x-4">
-                <BeautyButton classes=" px-6 py-2">Join Presale</BeautyButton>
+                <BeautyButton className="px-6 py-2">Join Presale</BeautyButton>
                 <button className="border border-white px-6 py-2 rounded-md">
                   Read Whitepaper
                 </button>

@@ -25,7 +25,12 @@ import TgIcon from "./tgIcon.png";
 import FaceBookIcon from "./facebookIcon.png";
 import MediumIcon from "./mediumIcon.png";
 import DiscordIcon from "./discordIcon.png";
-
+import GiftIcon from "./giftIcon.png";
+import OneWhiteIcon from "./oneWhiteIcon.png";
+import TransactionIcon from "./transactionIcon.png";
+import OnesIcon from "./onesIcon.png";
+import Gift from "./gift.png";
+import Lock from "./lock.png";
 export {
   EmptyCircleIcon,
   EmptyShieldIcon,
@@ -54,4 +59,10 @@ export {
   FaceBookIcon,
   MediumIcon,
   DiscordIcon,
+  GiftIcon,
+  OneWhiteIcon,
+  TransactionIcon,
+  OnesIcon,
+  Gift,
+  Lock,
 };

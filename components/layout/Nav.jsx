@@ -27,7 +27,7 @@ const Nav = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex top-0 sticky z-[100]  justify-center items-center bg-black/60 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-sm">
+    <nav className="flex top-0 sticky z-[1000] justify-center items-center bg-black/60 shadow-[0px_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-sm">
       <div className="w-[80%] flex justify-between items-center">
         <h1 className="text-xl font-bold">
           <Image src={Logo} alt="Slicefi Logo" width={59} height={59} />
@@ -40,13 +40,13 @@ const Nav = () => {
               key={i}
             >
               {link.path === pathname ? (
-                <span className="hidden lg:inline">
-                  <NavButton className="hidden lg:inline">
+                <span className="hidden xl:inline">
+                  <NavButton className="hidden xl:inline">
                     {link.name}
                   </NavButton>
                 </span>
               ) : (
-                <span className="px-[10px] text-[15px] font-normal leading-[20px] hidden lg:inline">
+                <span className="px-[10px] text-[15px] font-normal leading-[20px] hidden xl:inline">
                   {link.name}
                 </span>
               )}

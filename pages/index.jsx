@@ -48,7 +48,7 @@ const Home = () => {
       <div className="w-full h-full">
         <div className="chooseSection relative xl:py-[90px] lg:py-[40px] py-[10px]  xl:px-[208px] lg:px-[100px] md:px-[50px] px-[20px] mb-[60px]">
           <div className="relative text-center mb-[60px] z-[20]">
-            <h2 className="text-center text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
+            <h2 className="text-center text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[rgba(109,81,251,0.50)] bg-clip-text text-transparent">
               Why Choose SLICEFI?
             </h2>
             <p className="text-[20px] mt-[20px] text-[#E6E6F4] font-normal leading-6">
@@ -67,7 +67,7 @@ const Home = () => {
               ))}
             </div>
           </div>
-          <div className="absolute right-0 lg:w-auto w-[300px] bottom-[-500px] z-0">
+          <div className="absolute right-0 lg:w-auto w-[300px] bottom-[-500px] opacity-50 z-0">
             <Image src={RightJewellery} alt="RightJewellery"></Image>
           </div>
         </div>
@@ -440,7 +440,7 @@ const Home = () => {
               </p>
             </MainButton>
           </div>
-          <div className="absolute left-0 lg:w-auto w-[300px] top-[-400px] z-0">
+          <div className="absolute left-0 lg:w-auto w-[300px] top-[-400px] z-0 opacity-50">
             <Image src={LeftJewellery} alt="LeftJewellery"></Image>
           </div>
         </div>
@@ -574,7 +574,7 @@ const Home = () => {
                 Don't miss out on the next generation of DeFi
               </p>
               <div className="my-[60px] flex space-x-4">
-                <BeautyButton classes="px-[32px] py-[14px] text-[15px] font-bold leading-[24px] text-[#E6E6F4] text-center">
+                <BeautyButton className="px-[32px] py-[14px] text-[15px] font-bold leading-[24px] text-[#E6E6F4] text-center">
                   Join Presale
                 </BeautyButton>
                 <div className="flex justify-center">
