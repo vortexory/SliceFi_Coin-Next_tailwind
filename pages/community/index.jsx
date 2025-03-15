@@ -3,43 +3,37 @@ import Image from "next/image";
 import { Gift, Lock, OneWhiteIcon } from "../../components/assets/icons";
 import BeautyButton from "../../components/common/BeautyButton";
 import Card from "../../components/common/Card";
-import { SliceFiData } from "../../components/assets/datas";
 import PageLayout from "../../components/layout/PageLayout";
+import { InvestmentDatas } from "../../components/assets/datas/investmentData";
 
 export function CardContent({ children, className = "p-6" }) {
   return <div className={className}>{children}</div>;
 }
 
-export default function SliceFi() {
+export default function Community() {
   return (
     <PageLayout>
       {/* Header Section */}
-      <div className="relative text-left pt-[98px] xl:pb-[68px] md:pb-[20px] pb-[6px] xl:px-[208px] md:px-[100px] px-[25px] z-[20]">
+      <div className="relative text-left pt-[98px] xl:pb-[124px] md:pb-[80px] pb-[42px] xl:px-[208px] md:px-[100px] px-[25px] z-[20]">
         <div className="relative z-[10]">
           <h1 className="text-[40px] font-extrabold leading-[40px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
-            SLICEFI Coin
+            Join the SLICEFI Community
           </h1>
           <p className="mt-6 text-[#B0B0DD] text-[20px] font-normal leading-[28px]">
-            The utility token powering the future of decentralized finance.
+            Connect with fellow investors and stay updated on the latest
+            developments.
           </p>
-          <BeautyButton className="mt-10 py-[14px[ px-[32px] flex items-center gap-2">
-            Buy SLICEFI
-            <Image src={OneWhiteIcon} alt="whiteIcon"></Image>
-          </BeautyButton>
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-[rgba(109,81,251,0.50)] via-[rgba(9,9,11,0.20)] to-[#09090B]"></div>
       </div>
 
       {/* Features Section */}
-      <div className="xl:px-[208px] md:px-[100px] px-[25px] py-[66px] z-[20] relative">
-        <h2 className="text-[#FAFAFA] text-center text-[30px] font-normal leading-[36px]">
-          The Power of SLICEFI
-        </h2>
-        <div className="mt-[45px] grid xl:grid-cols-3 gap-8">
-          {SliceFiData.map((item, index) => (
+      <div className="xl:px-[208px] md:px-[100px] px-[25px] xl:py-[64px] py-[20px] z-[20] relative">
+        <div className="grid xl:grid-cols-3 gap-8">
+          {InvestmentDatas.map((item, index) => (
             <Card
               key={index}
-              className="relative min-h-[214px] text-white p-6 flex flex-col rounded-lg border border-[#09090B] bg-gradient-to-br from-[#09090B] via-[#09090B] to-[rgba(109,81,251,0.50)]"
+              className="relative min-h-[214px] text-white p-6 flex flex-col rounded-lg border border-[#09090B] bg-gradient-to-l from-[#312e81] via-[#1e293b] to-[#1e293b] bg-opacity-40"
             >
               <Image
                 src={item.icon}
@@ -52,8 +46,13 @@ export default function SliceFi() {
                   {item.title}
                 </h3>
                 <p className="text-[#B0B0DD] text-[15px] font-normal leading-[24px] mt-2">
-                  {item.desc}
+                  {item.intro}
                 </p>
+                <ul className="descriptions">
+                  {item.desc.map((it, ix) => (
+                    <li key={ix}>{it}</li>
+                  ))}
+                </ul>
               </div>
             </Card>
           ))}
@@ -85,7 +84,7 @@ export default function SliceFi() {
 
         {/* Platinum Membership Section */}
         <div className="">
-          <div className="bg-gradient-to-l from-[#312e8166] via-[#312e8166] to-[#1E293B99] p-6 rounded-lg border border-purple-500">
+          <div className="bg-gray-900 p-6 rounded-lg border border-purple-500">
             <h2 className="text-[#E6E6F4] text-[30px] font-semibold leading-[36px]">
               Platinum Membership
             </h2>

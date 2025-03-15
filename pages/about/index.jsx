@@ -8,7 +8,7 @@ const About = () => {
   return (
     <PageLayout>
       {/* Header Section with Gradient */}
-      <div className="relative text-left pt-[98px] pb-[128px] xl:px-[208px] md:px-[100px] px-[25px]">
+      <div className="relative text-left pt-[98px] xl:pb-[128px] md:pb-[80px] pb-[42px] xl:px-[208px] md:px-[100px] px-[25px]">
         <div className="relative z-[10]">
           <h1 className="text-[40px] font-extrabold leading-[40px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
             About SLICEFI
@@ -21,13 +21,13 @@ const About = () => {
       </div>
     
       {/* Mission and Vision Section */}
-      <div className="xl:px-[208px] md:px-[100px] px-[25px] py-[64px]">
+      <div className="z-[20] relative xl:px-[208px] md:px-[100px] px-[25px] py-[64px]">
         <div className="grid xl:grid-cols-2 gap-8">
           {/* Mission Card */}
           {MissionData.map((item, index) => (
             <Card
               key={index}
-              className="min-h-[214px] rounded-[10px] p-6 border border-[#09090B] bg-gradient-to-l from-[#312e81] via-[#1e293b] to-[#1e293b] bg-opacity-40"
+              className="min-h-[214px] rounded-[10px] p-6 border border-[#09090B] bg-gradient-to-l from-[#312e8166] via-[#312e8166] to-[#1E293B99]"
             >
               <div className="flex items-center mb-3 sm:mb-4">
                 <Image src={item.icon} alt={item.title} className="w-12 h-12" />
@@ -44,7 +44,7 @@ const About = () => {
       </div>
 
       {/* Core Values Section */}
-      <div className="xl:px-[208px] md:px-[100px] px-[25px] py-[66px]">
+      <div className="z-[20] relative xl:px-[208px] md:px-[100px] px-[25px] py-[66px]">
         <h2 className="text-center font-[Segoe UI] text-[40px] font-semibold leading-[36px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
           Our Core Values
         </h2>
