@@ -1,26 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion";
-import {
-  GiftIcon,
-  OnesIcon,
-  OneWhiteIcon,
-  TransactionIcon,
-  Gift,
-  Lock,
-} from "../../components/assets/icons";
 import Image from "next/image";
+import { Gift, Lock, OneWhiteIcon } from "../../components/assets/icons";
 import BeautyButton from "../../components/common/BeautyButton";
-
-export function Card({ children, className = "" }) {
-  return (
-    <motion.div
-      className={`rounded-lg shadow-lg border border-gray-700 ${className}`}
-      whileHover={{ scale: 1.02 }}
-    >
-      {children}
-    </motion.div>
-  );
-}
+import Card from "../../components/common/Card";
+import { SliceFiData } from "../../components/assets/datas";
+import PageLayout from "../../components/layout/PageLayout";
 
 export function CardContent({ children, className = "p-6" }) {
   return <div className={className}>{children}</div>;
@@ -28,9 +12,9 @@ export function CardContent({ children, className = "p-6" }) {
 
 export default function SliceFi() {
   return (
-    <div className="min-h-screen text-white">
+    <PageLayout>
       {/* Header Section */}
-      <div className="relative text-left pt-[96px] pb-[68px] xl:px-[208px] md:px-[100px] px-[25px]">
+      <div className="relative text-left pt-[98px] pb-[68px] xl:px-[208px] md:px-[100px] px-[25px]">
         <div className="relative z-[10]">
           <h1 className="text-[40px] font-extrabold leading-[40px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
             SLICEFI Coin
@@ -38,8 +22,9 @@ export default function SliceFi() {
           <p className="mt-6 text-[#B0B0DD] text-[20px] font-normal leading-[28px]">
             The utility token powering the future of decentralized finance.
           </p>
-          <BeautyButton className="mt-10 py-[14px[ px-[32px]">
-            Buy SLICEFI ➜
+          <BeautyButton className="mt-10 py-[14px[ px-[32px] flex items-center gap-2">
+            Buy SLICEFI
+            <Image src={OneWhiteIcon} alt="whiteIcon"></Image>
           </BeautyButton>
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-[rgba(109,81,251,0.50)] via-[rgba(9,9,11,0.20)] to-[#09090B]"></div>
@@ -51,23 +36,7 @@ export default function SliceFi() {
           The Power of SLICEFI
         </h2>
         <div className="mt-[45px] grid xl:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Multi-Asset Investment",
-              desc: "Use SLICEFI to invest in real estate, stocks, and digital assets.",
-              icon: OnesIcon,
-            },
-            {
-              title: "Transaction Currency",
-              desc: "Pay platform fees and transfer value seamlessly.",
-              icon: TransactionIcon,
-            },
-            {
-              title: "Rewards & Benefits",
-              desc: "Earn staking rewards and exclusive membership perks.",
-              icon: GiftIcon,
-            },
-          ].map((item, index) => (
+          {SliceFiData.map((item, index) => (
             <Card
               key={index}
               className="relative min-h-[214px] text-white p-6 flex flex-col rounded-lg border border-[#09090B] bg-gradient-to-br from-[#09090B] via-[#09090B] to-[rgba(109,81,251,0.50)]"
@@ -91,6 +60,7 @@ export default function SliceFi() {
         </div>
       </div>
 
+      {/* Staking & Reward Section */}
       <div className="xl:px-[208px] md:px-[100px] px-[25px] py-[64px] grid xl:grid-cols-2 gap-12">
         {/* Staking & Rewards Section */}
         <div className="">
@@ -140,6 +110,6 @@ export default function SliceFi() {
           </div>
         </div>
       </div>
-    </div>
+    </PageLayout>
   );
 }

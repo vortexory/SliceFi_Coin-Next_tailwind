@@ -8,6 +8,7 @@ import LeftJewellery from "./leftJewellery.png";
 import RightJewellery from "./rightJewellery.png";
 import LeftWorld from "./leftWorld.png";
 import FooterJewellery from "./footerJewellery.png";
+import PageJewellery from "./pageJewellery.png"
 
 export {
   Logo,
@@ -19,5 +20,6 @@ export {
   LeftJewellery,
   RightJewellery,
   LeftWorld,
+  PageJewellery,
   FooterJewellery,
 };

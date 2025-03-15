@@ -31,6 +31,9 @@ import TransactionIcon from "./transactionIcon.png";
 import OnesIcon from "./onesIcon.png";
 import Gift from "./gift.png";
 import Lock from "./lock.png";
+import Rocket from "./rocket.png";
+import World from "./world.png";
+import UtilWorldIcon from "./utilWorldIcon.png";
 export {
   EmptyCircleIcon,
   EmptyShieldIcon,
@@ -65,4 +68,7 @@ export {
   OnesIcon,
   Gift,
   Lock,
+  Rocket,
+  World,
+  UtilWorldIcon,
 };
