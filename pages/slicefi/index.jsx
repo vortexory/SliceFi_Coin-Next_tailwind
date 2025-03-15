@@ -22,7 +22,7 @@ export default function SliceFi() {
           <p className="mt-6 text-[#B0B0DD] text-[20px] font-normal leading-[28px]">
             The utility token powering the future of decentralized finance.
           </p>
-          <BeautyButton className="mt-10 py-[14px[ px-[32px] flex items-center gap-2">
+          <BeautyButton className="mt-10 py-[14px] px-[32px] flex items-center gap-2">
             Buy SLICEFI
             <Image src={OneWhiteIcon} alt="whiteIcon"></Image>
           </BeautyButton>

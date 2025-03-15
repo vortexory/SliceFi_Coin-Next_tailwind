@@ -43,6 +43,7 @@ import InstagramBox from "./instagramBox.png";
 import XBox from "./xBox.png";
 import CrownIcon from "./crownIcon.png";
 import RightArrow from "./rightArrow.png";
+import PageIcon from "./pageIcon.png";
 export {
   EmptyCircleIcon,
   EmptyShieldIcon,
@@ -51,6 +52,7 @@ export {
   CommentIcon,
   GiftIcon2,
   UserIcon,
+  PageIcon,
   PasteIcon,
   OneIcon,
   GraphIcon,
