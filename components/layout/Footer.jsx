@@ -21,25 +21,25 @@ const Footer = () => {
             </h4>
             <div className="flex flex-col pt-[16px] gap-2">
               <Link
-                href="/"
+                href="/about"
                 className="text-[15px] font-normal leading-[24px] text-[#B0B0DD]"
               >
                 About Us
               </Link>
               <Link
-                href="/"
+                href="/slicefi"
                 className="text-[15px] font-normal leading-[24px] text-[#B0B0DD]"
               >
                 SLICEFI Coin
               </Link>
               <Link
-                href="/"
+                href="/investment"
                 className="text-[15px] font-normal leading-[24px] text-[#B0B0DD]"
               >
                 Investment
               </Link>
               <Link
-                href="/"
+                href="/community"
                 className="text-[15px] font-normal leading-[24px] text-[#B0B0DD]"
               >
                 Community
@@ -70,7 +70,7 @@ const Footer = () => {
                 FAQ
               </Link>
               <Link
-                href="/"
+                href="/investors"
                 className="text-[15px] font-normal leading-[24px] text-[#B0B0DD]"
               >
                 Investors
@@ -92,7 +92,7 @@ const Footer = () => {
         <hr className="h-[2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7]" />
         <div className="flex h-[53px] pt-[36px] justify-center items-center">
           <p className="text-center text-[15px] font-normal leading-[20px] text-[#8A8ACC]">
-            © 2025 SLICEFI. All rights reserved.
+            © {new Date().getFullYear()} SLICEFI. All rights reserved.
           </p>
         </div>
       </div>

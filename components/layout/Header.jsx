@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Nav from "./Nav";
+import CountdownTimer from "../common/CountDownTimer";
 import BeautyButton from "../common/BeautyButton";
 import { Jewellery, World } from "../assets/images";
 
@@ -33,6 +34,7 @@ export const navData = [
 
 const Header = () => {
   const pathname = usePathname();
+  const targetDate = new Date("2025-04-01T00:00:00");
   return (
     <div className="min-h-screen relative text-white bg-gradient-to-tr from-[rgba(109,81,251,0.30)] via-[rgba(9,9,11,0.20)] to-[#09090B]">
       <Nav />
@@ -64,22 +66,7 @@ const Header = () => {
           </div>
         </div>
         <div className="relative flex justify-center text-center z-[100] gap-3">
-          <div className="flex lg:w-[156px] w-[80px] p-[17px] flex-col flex-shrink-0 self-stretch rounded-[8px] shadow-[1px_1px_2px_rgba(10,10,130,0.6)] bg-[rgba(0,0,0,0.50)] backdrop-blur-[2px]">
-            <p className="text-3xl font-bold text-[#8A8ACC]">82</p>
-            <p className="text-[14px] text-[#B0B0DD]">Days</p>
-          </div>
-          <div className="flex lg:w-[156px] w-[80px] p-[17px] flex-col flex-shrink-0 self-stretch rounded-[8px] shadow-[1px_1px_2px_rgba(10,10,130,0.6)] bg-[rgba(0,0,0,0.50)] backdrop-blur-[2px]">
-            <p className="text-3xl font-bold text-[#8A8ACC]">15</p>
-            <p className="text-[14px] text-[#B0B0DD]">Hours</p>
-          </div>
-          <div className="flex lg:w-[156px] w-[80px] p-[17px] flex-col flex-shrink-0 self-stretch rounded-[8px] shadow-[1px_1px_2px_rgba(10,10,130,0.6)] bg-[rgba(0,0,0,0.50)] backdrop-blur-[2px]">
-            <p className="text-3xl font-bold text-[#8A8ACC]">25</p>
-            <p className="text-[14px] text-[#B0B0DD]">Minutes</p>
-          </div>
-          <div className="flex lg:w-[156px] w-[80px] p-[17px] flex-col flex-shrink-0 self-stretch rounded-[8px] shadow-[1px_1px_2px_rgba(10,10,130,0.6)] bg-[rgba(0,0,0,0.50)] backdrop-blur-[2px]">
-            <p className="text-3xl font-bold text-[#8A8ACC]">51</p>
-            <p className="text-[14px] text-[#B0B0DD]">Seconds</p>
-          </div>
+          <CountdownTimer targetDate={targetDate} />
         </div>
       </div>
       <Image
