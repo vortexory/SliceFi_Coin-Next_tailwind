@@ -31,7 +31,6 @@ import {
 const Home = () => {
   return (
     <div className="h-full">
-      {/* text */}
       <div className="w-full h-full">
         <div className="chooseSection relative xl:py-[90px] lg:py-[40px] py-[10px]  2xl:px-[208px] lg:px-[100px] md:px-[50px] px-[20px] mb-[60px]">
           <div className="relative text-center mb-[60px] z-[20]">
