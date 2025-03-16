@@ -6,9 +6,6 @@ import {
   BoardIcon,
   CheckIcon,
   CheckIcons,
-  BoardCommon,
-  ArrowTopIcon,
-  ArrowDownIcon,
 } from "../components/assets/icons";
 import {
   chooseSectionData,
@@ -20,6 +17,7 @@ import {
 import MainButton from "../components/common/MainButton";
 import BeautyButton from "../components/common/BeautyButton";
 import CommonButton from "../components/common/CommonButton";
+import Accordion from "../components/common/Accordian";
 import Card from "../components/common/Card";
 import {
   BottomImg,
@@ -29,6 +27,37 @@ import {
 } from "../components/assets/images";
 
 const Home = () => {
+  const faqs = [
+    {
+      title: "Is SLICEFI a security token?",
+      content:
+        "No, SLICEFI is a utility token used within our platform for investments, transactions, and staking. It provides access to platform features but does not represent ownership in any company or entity.",
+    },
+    {
+      title: "Is my investment secured?",
+      content:
+        "We ensure top-level security through smart contracts and blockchain transparency.",
+    },
+    {
+      title: "How can I earn from SLICEFI?",
+      content:
+        "You can earn by staking, trading, or participating in yield farming programs.",
+    },
+    {
+      title: "What blockchain does SLICEFI operate on?",
+      content: "SLICEFI operates on Ethereum and Binance Smart Chain (BSC).",
+    },
+    {
+      title: "How are real estate investments verified?",
+      content:
+        "We use blockchain-based verification and third-party audits to ensure security.",
+    },
+    {
+      title: "What are the minimum investment requirements?",
+      content:
+        "The minimum investment starts at $100 equivalent in SLICEFI tokens.",
+    },
+  ];
   return (
     <div className="h-full">
       <div className="w-full h-full">
@@ -44,26 +73,26 @@ const Home = () => {
           </div>
           <div className="relative flex justify-center z-[20]">
             <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-8">
-              {chooseSectionData.map((item, index)=>(
+              {chooseSectionData.map((item, index) => (
                 <Card
-                key={index}
-                className="relative min-h-[174px] text-white p-6 flex flex-col rounded-lg border-2 border-[#8b5cf6b3] bg-gradient-to-br from-[#09090B] via-[#09090B] to-[rgba(109,81,251,0.50)]"
-              >
-                <Image
-                  src={item.icon}
-                  width={48}
-                  height={48}
-                  alt={item.title}
-                ></Image>
-                <div className="mt-5">
-                  <h4 className="text-[#E6E6F4] text-[20px] font-semibold leading-[28px]">
-                    {item.title}
-                  </h4>
-                  <p className="text-[#B0B0DD] text-[15px] font-normal leading-[24px] mt-2">
-                    {item.description}
-                  </p>
-                </div>
-              </Card>
+                  key={index}
+                  className="relative min-h-[174px] text-white p-6 flex flex-col rounded-lg border-2 border-[#8b5cf6b3] bg-gradient-to-br from-[#09090B] via-[#09090B] to-[rgba(109,81,251,0.50)]"
+                >
+                  <Image
+                    src={item.icon}
+                    width={48}
+                    height={48}
+                    alt={item.title}
+                  ></Image>
+                  <div className="mt-5">
+                    <h4 className="text-[#E6E6F4] text-[20px] font-semibold leading-[28px]">
+                      {item.title}
+                    </h4>
+                    <p className="text-[#B0B0DD] text-[15px] font-normal leading-[24px] mt-2">
+                      {item.description}
+                    </p>
+                  </div>
+                </Card>
               ))}
             </div>
           </div>
@@ -144,7 +173,7 @@ const Home = () => {
                         src={CheckIcon}
                         alt="CheckIcon1"
                       ></Image>
-                      <p>Dedicated account manager</p>
+                      <p>Free premium credit card</p>
                     </div>
                     <div className="flex items-center">
                       <Image
@@ -152,7 +181,7 @@ const Home = () => {
                         src={CheckIcon}
                         alt="CheckIcon1"
                       ></Image>
-                      <p>Dedicated account manager</p>
+                      <p>20% discount on platform fees</p>
                     </div>
                     <div className="flex items-center my-4">
                       <Image
@@ -160,7 +189,7 @@ const Home = () => {
                         src={CheckIcon}
                         alt="CheckIcon1"
                       ></Image>
-                      <p>Dedicated account manager</p>
+                      <p>Exclusive investment opportunities</p>
                     </div>
                     <div className="flex items-center">
                       <Image
@@ -168,7 +197,7 @@ const Home = () => {
                         src={CheckIcon}
                         alt="CheckIcon1"
                       ></Image>
-                      <p>Dedicated account manager</p>
+                      <p>Early access to new platform features</p>
                     </div>
                   </div>
                   <CommonButton className="w-full mt-[30px] py-2 border-2 border-[#8b5cf6b3] rounded-[8px]">
@@ -276,7 +305,7 @@ const Home = () => {
           <div className="absolute left-0 xl:top-0 md:top-[-75px] top-[-150px] z-[0]">
             <Image
               src={LeftWorld}
-              className="xl:w-auto md:w-[300px] w-[200px]"
+              className="xl:w-auto md:w-[300px] w-[200px] z-0"
               alt="leftworld"
             ></Image>
           </div>
@@ -445,90 +474,13 @@ const Home = () => {
                   alt="bg_board"
                 ></Image>
                 <div className="relative">
-                  <div className="mb-[40px]">
-                    <div className="flex justify-between items-center">
-                      <h4 className="text-[18px] font-normal leading-[28px] tracking-[-0.45px] text-[#E6E6F4]">
-                        Is SLICEFI a security token?
-                      </h4>
-                      <Image
-                        src={ArrowTopIcon}
-                        alt="top"
-                        width={20}
-                        height={20}
-                      ></Image>
-                    </div>
-                    <p className="mt-[15px] text-[16px] font-normal leading-[24px] text-[#B0B0DD]">
-                      No, SLICEFI is a utility token used within our platform
-                      for investments, transactions, and staking. It provides
-                      access to platform features but does not represent
-                      ownership in any company or entity.
-                    </p>
-                  </div>
-                  <div className="mb-[40px]">
-                    <div className="flex justify-between items-center">
-                      <h4 className="text-[18px] font-normal leading-[28px] tracking-[-0.45px] text-[#E6E6F4]">
-                        Is my investment secured?
-                      </h4>
-                      <Image
-                        src={ArrowDownIcon}
-                        alt="down"
-                        width={20}
-                        height={20}
-                      ></Image>
-                    </div>
-                  </div>
-                  <div className="mb-[40px]">
-                    <div className="flex justify-between items-center">
-                      <h4 className="text-[18px] font-normal leading-[28px] tracking-[-0.45px] text-[#E6E6F4]">
-                        How can I earn from SLICEFI?
-                      </h4>
-                      <Image
-                        src={ArrowDownIcon}
-                        alt="down"
-                        width={20}
-                        height={20}
-                      ></Image>
-                    </div>
-                  </div>
-                  <div className="mb-[40px]">
-                    <div className="flex justify-between items-center">
-                      <h4 className="text-[18px] font-normal leading-[28px] tracking-[-0.45px] text-[#E6E6F4]">
-                        What blockchain does SLICEFI operate on?
-                      </h4>
-                      <Image
-                        src={ArrowDownIcon}
-                        alt="down"
-                        width={20}
-                        height={20}
-                      ></Image>
-                    </div>
-                  </div>
-                  <div className="mb-[40px]">
-                    <div className="flex justify-between items-center">
-                      <h4 className="text-[18px] font-normal leading-[28px] tracking-[-0.45px] text-[#E6E6F4]">
-                        How are real estate investments verified?
-                      </h4>
-                      <Image
-                        src={ArrowDownIcon}
-                        alt="down"
-                        width={20}
-                        height={20}
-                      ></Image>
-                    </div>
-                  </div>
-                  <div className="mb-[40px]">
-                    <div className="flex justify-between items-center">
-                      <h4 className="text-[18px] font-normal leading-[28px] tracking-[-0.45px] text-[#E6E6F4]">
-                        What are the minimum investment requirements?
-                      </h4>
-                      <Image
-                        src={ArrowDownIcon}
-                        alt="down"
-                        width={20}
-                        height={20}
-                      ></Image>
-                    </div>
-                  </div>
+                  {faqs.map((faq, index) => (
+                    <Accordion
+                      key={index}
+                      title={faq.title}
+                      content={faq.content}
+                    />
+                  ))}
                 </div>
                 <div className="flex flex-col justify-center items-center">
                   <p className="relative text-[30px] font-normal leading-[24px] text-[#B0B0DD] text-center lg:pt-[40px] pt-[0] pb-[60px]">
