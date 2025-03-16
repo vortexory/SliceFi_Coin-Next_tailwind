@@ -17,9 +17,10 @@ import {
   Tokenomics,
   InvestmentData,
 } from "../components/assets/datas";
-import Box from "../components/common/Box";
 import MainButton from "../components/common/MainButton";
 import BeautyButton from "../components/common/BeautyButton";
+import CommonButton from "../components/common/CommonButton";
+import Card from "../components/common/Card";
 import {
   BottomImg,
   LeftJewellery,
@@ -32,7 +33,7 @@ const Home = () => {
     <div className="h-full">
       {/* text */}
       <div className="w-full h-full">
-        <div className="chooseSection relative xl:py-[90px] lg:py-[40px] py-[10px]  xl:px-[208px] lg:px-[100px] md:px-[50px] px-[20px] mb-[60px]">
+        <div className="chooseSection relative xl:py-[90px] lg:py-[40px] py-[10px]  2xl:px-[208px] lg:px-[100px] md:px-[50px] px-[20px] mb-[60px]">
           <div className="relative text-center mb-[60px] z-[20]">
             <h2 className="text-center text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[rgba(109,81,251,0.50)] bg-clip-text text-transparent">
               Why Choose SLICEFI?
@@ -43,13 +44,27 @@ const Home = () => {
             </p>
           </div>
           <div className="relative flex justify-center z-[20]">
-            <div className="flex flex-wrap justify-around items-center gap-[32px]">
-              {chooseSectionData.map((item, index) => (
-                <Box
-                  className="lg:w-[480px] w-[400px] h-[174px]"
-                  key={index}
-                  data={item}
-                />
+            <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-8">
+              {chooseSectionData.map((item, index)=>(
+                <Card
+                key={index}
+                className="relative min-h-[174px] text-white p-6 flex flex-col rounded-lg border-2 border-[#8b5cf6b3] bg-gradient-to-br from-[#09090B] via-[#09090B] to-[rgba(109,81,251,0.50)]"
+              >
+                <Image
+                  src={item.icon}
+                  width={48}
+                  height={48}
+                  alt={item.title}
+                ></Image>
+                <div className="mt-5">
+                  <h4 className="text-[#E6E6F4] text-[20px] font-semibold leading-[28px]">
+                    {item.title}
+                  </h4>
+                  <p className="text-[#B0B0DD] text-[15px] font-normal leading-[24px] mt-2">
+                    {item.description}
+                  </p>
+                </div>
+              </Card>
               ))}
             </div>
           </div>
@@ -70,8 +85,8 @@ const Home = () => {
               asset transfers from crypto to real-world value.
             </p>
           </div>
-          <div className="flex justify-between items-center flex-wrap">
-            <div className="relative lg:w-[500px] w-full">
+          <div className="grid xl:grid-cols-2 gap-8">
+            <div className="relative w-full">
               <h3 className="text-[24px] font-semibold leading-[32px] lg:text-start text-center tracking-[-0.6px] text-[#E6E6F4] mb-6">
                 The Utility of SlICEFI
               </h3>
@@ -98,97 +113,92 @@ const Home = () => {
                 ))}
               </div>
             </div>
-            <div className="relative p-8 lg:w-auto w-full">
-              <h3 className="relative z-10 flex items-center text-[30px] font-semibold leading-[32px] tracking-[-0.6px] text-[#E6E6F4]">
-                <Image
-                  src={StarIcon}
-                  alt="starIcon"
-                  className="mr-4 rounded-full"
-                  width={48}
-                  height={48}
-                ></Image>
-                Platinum Membership
-              </h3>
-              <div className="z-10 relative text-[16px] font-normal leading-[24px] text-[#B0B0DD]">
-                <p className="my-6">
-                  Exclusive benefits for holders of 10M SLICEFI ($10,000
-                  equivalent)
-                </p>
-                <div>
-                  <div className="flex items-center">
-                    <Image
-                      className="mr-3"
-                      src={CheckIcon}
-                      alt="CheckIcon1"
-                    ></Image>
-                    <p>Dedicated account manager</p>
-                  </div>
-                  <div className="flex items-center my-4">
-                    <Image
-                      className="mr-3"
-                      src={CheckIcon}
-                      alt="CheckIcon1"
-                    ></Image>
-                    <p>Dedicated account manager</p>
-                  </div>
-                  <div className="flex items-center">
-                    <Image
-                      className="mr-3"
-                      src={CheckIcon}
-                      alt="CheckIcon1"
-                    ></Image>
-                    <p>Dedicated account manager</p>
-                  </div>
-                  <div className="flex items-center my-4">
-                    <Image
-                      className="mr-3"
-                      src={CheckIcon}
-                      alt="CheckIcon1"
-                    ></Image>
-                    <p>Dedicated account manager</p>
-                  </div>
-                  <div className="flex items-center">
-                    <Image
-                      className="mr-3"
-                      src={CheckIcon}
-                      alt="CheckIcon1"
-                    ></Image>
-                    <p>Dedicated account manager</p>
-                  </div>
-                </div>
-                <MainButton classes="lg:w-[520px] w-full h-[60px] mt-8">
-                  <p className="relative text-[20px] font-bold leading-[20px] text-[#E6E6F4]">
-                    Join Platinum Membership
+            <Card className="relative min-h-[214px] text-white p-6 flex flex-col rounded-lg border border-[#09090B] bg-gradient-to-l from-[#312e8166] via-[#312e8166] to-[#1E293B99]">
+              <div className="relative p-8 w-full">
+                <h3 className="relative z-10 flex items-center text-[30px] font-semibold leading-[32px] tracking-[-0.6px] text-[#E6E6F4]">
+                  <Image
+                    src={StarIcon}
+                    alt="starIcon"
+                    className="mr-4 rounded-full"
+                    width={48}
+                    height={48}
+                  ></Image>
+                  Platinum Membership
+                </h3>
+                <div className="z-10 relative text-[16px] font-normal leading-[24px] text-[#B0B0DD]">
+                  <p className="my-6">
+                    Exclusive benefits for holders of 10M SLICEFI ($10,000
+                    equivalent)
                   </p>
-                </MainButton>
+                  <div>
+                    <div className="flex items-center">
+                      <Image
+                        className="mr-3"
+                        src={CheckIcon}
+                        alt="CheckIcon1"
+                      ></Image>
+                      <p>Dedicated account manager</p>
+                    </div>
+                    <div className="flex items-center my-4">
+                      <Image
+                        className="mr-3"
+                        src={CheckIcon}
+                        alt="CheckIcon1"
+                      ></Image>
+                      <p>Dedicated account manager</p>
+                    </div>
+                    <div className="flex items-center">
+                      <Image
+                        className="mr-3"
+                        src={CheckIcon}
+                        alt="CheckIcon1"
+                      ></Image>
+                      <p>Dedicated account manager</p>
+                    </div>
+                    <div className="flex items-center my-4">
+                      <Image
+                        className="mr-3"
+                        src={CheckIcon}
+                        alt="CheckIcon1"
+                      ></Image>
+                      <p>Dedicated account manager</p>
+                    </div>
+                    <div className="flex items-center">
+                      <Image
+                        className="mr-3"
+                        src={CheckIcon}
+                        alt="CheckIcon1"
+                      ></Image>
+                      <p>Dedicated account manager</p>
+                    </div>
+                  </div>
+                  <CommonButton className="w-full mt-[30px] py-2 border-2 border-[#8b5cf6b3] rounded-[8px]">
+                    Learn More
+                  </CommonButton>
+                </div>
               </div>
-              <Image
-                className="absolute top-0 left-0 w-full h-full min-w-[400px]"
-                src={BoardIcon}
-                alt="bg_board"
-              ></Image>
-            </div>
+            </Card>
           </div>
         </div>
         <div
-          className="roadmap mb-[60px] lg:pt-[84px] pt-[10px] lg:pb-[60px] pb-0 relative"
+          className="roadmap mb-[60px] lg:pt-[84px] pt-[10px] lg:pb-[60px] pb-0 px-[20px] relative"
           id="roadmap"
         >
           <div className="relative z-[20] text-center lg:mb-[60px] mb-[40px]">
             <h2 className="text-center text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
               RoadMap
             </h2>
-            <p className="text-[20px] mt-[20px] text-[#E6E6F4] font-normal leading-6">
+            <p className="text-[20px] mt-[20px] text-[#E6E6F4] font-normal leading-6 ]">
               Our strategic plan for building and expanding the roadmap
               ecosystem.
             </p>
           </div>
           <div className="flex justify-center">
-            <div className="relative flex flex-wrap justify-around items-center lg:gap-[32px] gap-[20px]">
+            <div className="relative flex flex-wrap justify-around items-center lg:gap-[32px] gap-[20px] px-[25px]">
               {roadmapSectionData.map((item, index) => (
-                <div
+                <Card
                   key={index}
-                  className="relative px-[18px] py-[21px] w-[350px] h-[400px] z-[20]"
+                  className="relative px-[18px] py-[21px] md:w-[350px] w-full h-[400px] flex flex-col rounded-lg border border-[#09090B] bg-gradient-to-l from-[#312e8166] via-[#312e8166] to-[#1E293B99]"
                 >
                   <h3 className="relative w-[120px] h-[30px] mb-[40px] text-[12px] font-normal leading-[16px] text-[#E6E6F4] rounded-[10px] bg-[#5454B5] z-10 p-[5px] flex justify-center items-center ">
                     {item.date}
@@ -260,12 +270,7 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                  <Image
-                    className="absolute top-0 left-0 w-full h-full"
-                    src={BoardIcon}
-                    alt="bg_board"
-                  ></Image>
-                </div>
+                </Card>
               ))}
             </div>
           </div>
@@ -278,7 +283,7 @@ const Home = () => {
           </div>
         </div>
         <div
-          className="tokenomics relative mb-[60px] lg:py-[189px] py-[50px] bg-gradient-to-b from-[#09090B] to-[rgba(109,81,251,0.10)]"
+          className="tokenomics relative mb-[60px] lg:py-[189px] py-[50px] px-[20px] bg-gradient-to-b from-[#09090B] to-[rgba(109,81,251,0.10)]"
           id="tokenomics"
         >
           <div className="text-center mb-[60px]">
@@ -292,9 +297,9 @@ const Home = () => {
           <div className="flex justify-center">
             <div className="flex flex-wrap justify-around items-center gap-[32px]">
               {Tokenomics.map((item, index) => (
-                <div
+                <Card
                   key={index}
-                  className="relative px-[18px] py-[21px] w-[280px] h-[182px]"
+                  className="relative px-[18px] py-[21px] md:w-[280px] w-full h-[182px] flex flex-col rounded-lg border border-[#09090B] bg-gradient-to-l from-[#312e8166] via-[#312e8166] to-[#1E293B99]"
                 >
                   <div className="z-10 relative text-[16px] font-normal leading-[24px] text-[#B0B0DD]">
                     <div>
@@ -312,17 +317,15 @@ const Home = () => {
                       {item.description}
                     </p>
                   </div>
-                  <Image
-                    className="absolute top-0 left-0 w-full h-full"
-                    src={BoardCommon}
-                    alt="bg_common"
-                  ></Image>
-                </div>
+                </Card>
               ))}
             </div>
           </div>
         </div>
-        <div className="investment mb-[60px] relative" id="investment">
+        <div
+          className="investment mb-[60px] relative px-[20px]"
+          id="investment"
+        >
           <div className="text-center mb-[60px] relative z-[20]">
             <h2 className="text-center text-[40px] font-semibold leading-[48px] tracking-[-1.2px] bg-gradient-to-r from-[#60A5FA] to-[#A855F7] bg-clip-text text-transparent">
               Investment Opportunities
@@ -336,9 +339,9 @@ const Home = () => {
             <div className="flex justify-center">
               <div className="flex flex-wrap justify-around items-center gap-[32px]">
                 {InvestmentData.map((item, index) => (
-                  <div
+                  <Card
                     key={index}
-                    className="relative p-[20px] w-[400px] h-[400px]"
+                    className="relative p-[20px] md:w-[400px] w-full h-[400px] flex flex-col rounded-lg border border-[#09090B] bg-gradient-to-l from-[#312e8166] via-[#312e8166] to-[#1E293B99]"
                   >
                     <div className="mb-[40px]">
                       <Image
@@ -409,12 +412,7 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                    <Image
-                      className="absolute top-0 left-0 w-full h-full"
-                      src={BoardIcon}
-                      alt="bg_board"
-                    ></Image>
-                  </div>
+                  </Card>
                 ))}
               </div>
             </div>
