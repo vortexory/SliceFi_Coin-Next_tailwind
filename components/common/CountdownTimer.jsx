@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import CountUp from "react-countup";
 
 const CountdownBox = ({ value, label }) => {
   return (
@@ -10,7 +11,11 @@ const CountdownBox = ({ value, label }) => {
         transition={{ duration: 1, ease: "easeOut" }}
         className="text-3xl font-bold text-[#8A8ACC]"
       >
-        {value}
+        {label === "Seconds" ? (
+          value
+        ) : (
+          <CountUp start={0} end={value} duration={5} />
+        )}
       </motion.p>
       <p className="text-[14px] text-[#B0B0DD]">{label}</p>
     </div>
